@@ -226,3 +226,14 @@ h1 { margin: 24px 0 22px; font-size: clamp(50px, 7.2vw, 92px); line-height: .97;
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Expandable experience detail */
+.experience-details { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 4px; }
+.experience-details summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0 11px; color: var(--text); font-weight: 750; user-select: none; }
+.experience-details summary::-webkit-details-marker { display: none; }
+.experience-details summary:hover { color: var(--accent); }
+.details-icon { width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 18px; line-height: 1; transition: transform .2s ease, border-color .2s ease; }
+.experience-details[open] .details-icon { transform: rotate(45deg); border-color: var(--accent); }
+.experience-details-body { padding: 0 0 4px; }
+.full-experience-list { margin-top: 6px; }
+.full-experience-list li + li { margin-top: 9px; }

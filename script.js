@@ -120,10 +120,7 @@ quickPrompts?.querySelectorAll('button').forEach((button) => button.addEventList
 
 const contactForm = document.getElementById('contact-form');
 contactForm?.addEventListener('submit', (event) => {
-  if (contactForm.action.includes('REPLACE_WITH_YOUR_FORM_ID')) {
-    event.preventDefault();
-    const note = document.getElementById('form-note');
-    note.textContent = 'Contact form setup is not finished yet. Create a free Formspree form and replace REPLACE_WITH_YOUR_FORM_ID in index.html.';
-    note.style.color = '#ffb0b0';
-  }
+  const submit = contactForm.querySelector('.form-submit');
+  if (submit) { submit.disabled = true; submit.innerHTML = 'Sending…'; }
+
 });
